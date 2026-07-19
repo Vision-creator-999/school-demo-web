@@ -257,70 +257,103 @@ export const Home: React.FC = () => {
             {/* Student Portal Card */}
             <Link
               to="/portal/student"
-              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
+              className="bg-white hover:border-primary border border-slate-200 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between overflow-hidden cursor-pointer"
             >
-              <img src="https://www.vedantu.com/seo/content-images/95444fcf-ba1c-467b-85d5-e8d0fcb2c131.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
-              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
-                <Users size={32} />
+              {/* Top Image Block */}
+              <div className="h-36 w-full relative overflow-hidden">
+                <img
+                  src="https://www.vedantu.com/seo/content-images/95444fcf-ba1c-467b-85d5-e8d0fcb2c131.jpg"
+                  alt=""
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Floating Icon */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white text-primary p-3 rounded-full border border-slate-200 shadow-sm z-10 transition-colors group-hover:bg-primary group-hover:text-cream">
+                  <Users size={24} />
+                </div>
               </div>
-              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
-                {isHindi ? 'छात्र पोर्टल' : 'Student Portal'}
-              </h4>
-              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
-                {isHindi 
-                  ? 'समय सारणी, गृहकार्य असाइनमेंट, परीक्षा परिणाम और दैनिक व्याख्यान विवरण देखें।' 
-                  : 'Access time tables, assignments, exam result sheets, and daily scheduled lectures.'}
-              </p>
-              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
-                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
-              </span>
+
+              {/* Bottom Text Block */}
+              <div className="p-6 pt-8 text-center flex flex-col items-center flex-grow">
+                <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                  {isHindi ? 'छात्र पोर्टल' : 'Student Portal'}
+                </h4>
+                <p className="text-xs text-heading leading-relaxed mb-6">
+                  {isHindi 
+                    ? 'समय सारणी, गृहकार्य असाइनमेंट, परीक्षा परिणाम और दैनिक व्याख्यान विवरण देखें।' 
+                    : 'Access time tables, assignments, exam result sheets, and daily scheduled lectures.'}
+                </p>
+                <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                  {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+                </span>
+              </div>
             </Link>
 
             {/* Teacher Portal Card */}
             <Link
               to="/portal/teacher"
-              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
+              className="bg-white hover:border-primary border border-slate-200 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between overflow-hidden cursor-pointer"
             >
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmOES95iEN4MA0IosOwNQLIHeDP2-Ksz2Wgms_e1kiw&s=10" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
-              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
-                <BookOpen size={32} />
+              {/* Top Image Block */}
+              <div className="h-36 w-full relative overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmOES95iEN4MA0IosOwNQLIHeDP2-Ksz2Wgms_e1kiw&s=10"
+                  alt=""
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Floating Icon */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white text-primary p-3 rounded-full border border-slate-200 shadow-sm z-10 transition-colors group-hover:bg-primary group-hover:text-cream">
+                  <BookOpen size={24} />
+                </div>
               </div>
-              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
-                {isHindi ? 'शिक्षक पोर्टल' : 'Teacher Portal'}
-              </h4>
-              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
-                {isHindi 
-                  ? 'कक्षावार छात्र उपस्थिति अंकित करें, दैनिक लॉग दर्ज करें और अंक अपलोड करें।' 
-                  : 'Log student attendance registers, track academic logs, and upload exam scores.'}
-              </p>
-              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
-                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
-              </span>
+
+              {/* Bottom Text Block */}
+              <div className="p-6 pt-8 text-center flex flex-col items-center flex-grow">
+                <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                  {isHindi ? 'शिक्षक पोर्टल' : 'Teacher Portal'}
+                </h4>
+                <p className="text-xs text-heading leading-relaxed mb-6">
+                  {isHindi 
+                    ? 'कक्षावार छात्र उपस्थिति अंकित करें, दैनिक लॉग दर्ज करें और अंक अपलोड करें।' 
+                    : 'Log student attendance registers, track academic logs, and upload exam scores.'}
+                </p>
+                <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                  {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+                </span>
+              </div>
             </Link>
 
             {/* Admin Portal Card */}
             <Link
               to="/portal/admin"
-              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
+              className="bg-white hover:border-primary border border-slate-200 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between overflow-hidden cursor-pointer"
             >
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdt86OTlEf2ZU7GZ1RHEQn_ibA1oqHMjyUBke49dJeQQ&s=10" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
-              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
-                <ShieldCheck size={32} />
+              {/* Top Image Block */}
+              <div className="h-36 w-full relative overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdt86OTlEf2ZU7GZ1RHEQn_ibA1oqHMjyUBke49dJeQQ&s=10"
+                  alt=""
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Floating Icon */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white text-primary p-3 rounded-full border border-slate-200 shadow-sm z-10 transition-colors group-hover:bg-primary group-hover:text-cream">
+                  <ShieldCheck size={24} />
+                </div>
               </div>
-              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
-                {isHindi ? 'प्रशासक पोर्टल' : 'Admin Portal'}
-              </h4>
-              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
-                {isHindi 
-                  ? 'छात्र-शिक्षक ऑनबोर्डिणग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
-                  : 'Manage database backups, student onboarding records, and upload Excel files.'}
-              </p>
-              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
-                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
-              </span>
+
+              {/* Bottom Text Block */}
+              <div className="p-6 pt-8 text-center flex flex-col items-center flex-grow">
+                <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                  {isHindi ? 'प्रशासक पोर्टल' : 'Admin Portal'}
+                </h4>
+                <p className="text-xs text-heading leading-relaxed mb-6">
+                  {isHindi 
+                    ? 'छात्र-शिक्षक ऑनबोर्डिणग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
+                    : 'Manage database backups, student onboarding records, and upload Excel files.'}
+                </p>
+                <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                  {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+                </span>
+              </div>
             </Link>
           </div>
         </div>
@@ -344,31 +377,40 @@ export const Home: React.FC = () => {
           {programsData.map((prog) => (
             <div
               key={prog.id}
-              className={`relative rounded-xl border p-6 shadow-xs flex flex-col justify-between hover:shadow-md transition-all duration-300 overflow-hidden group ${prog.bgClass}`}
+              className="bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300 group"
             >
               {prog.image && (
-                <>
-                  <img src={prog.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-white/85 pointer-events-none" />
-                </>
+                <div className="h-36 w-full relative overflow-hidden">
+                  <img
+                    src={prog.image}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Floating Emoji Badge */}
+                  <div className="absolute bottom-2 left-4 bg-white/95 backdrop-blur-xs h-10 w-10 rounded-full flex items-center justify-center shadow-sm text-2xl select-none z-10 border border-slate-100">
+                    {prog.emoji}
+                  </div>
+                </div>
               )}
-              <div className="relative z-10">
-                <span className="text-4xl mb-4 block" role="presentation">{prog.emoji}</span>
-                <h4 className={`text-lg font-bold text-primary mb-3 ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
-                  {isHindi ? prog.titleHi : prog.titleEn}
-                </h4>
-                <p className={`text-xs text-heading leading-relaxed mb-6 ${isHindi ? 'font-devanagari text-[14px] leading-relaxed' : 'font-sans'}`}>
-                  {isHindi ? prog.descHi : prog.descEn}
-                </p>
-              </div>
               
-              <Link
-                to="/admissions"
-                className={`relative z-10 flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors w-fit font-sans`}
-              >
-                <span>{isHindi ? 'विवरण देखें' : 'View Admission'}</span>
-                <ArrowRight size={13} />
-              </Link>
+              <div className="p-6 pt-5 flex-grow flex flex-col justify-between">
+                <div>
+                  <h4 className={`text-base font-bold text-primary mb-3 group-hover:text-primary-dark transition-colors ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
+                    {isHindi ? prog.titleHi : prog.titleEn}
+                  </h4>
+                  <p className={`text-xs text-heading leading-relaxed mb-6 ${isHindi ? 'font-devanagari text-[14px] leading-relaxed' : 'font-sans'}`}>
+                    {isHindi ? prog.descHi : prog.descEn}
+                  </p>
+                </div>
+                
+                <Link
+                  to="/admissions"
+                  className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors w-fit font-sans"
+                >
+                  <span>{isHindi ? 'विवरण देखें' : 'View Admission'}</span>
+                  <ArrowRight size={13} />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -403,7 +445,7 @@ export const Home: React.FC = () => {
                     <img
                       src={act.image}
                       alt={act.titleEn}
-                      className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
                     <div className={`h-full ${act.bgClass} flex items-center justify-center relative overflow-hidden`}>
