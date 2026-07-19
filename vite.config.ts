@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/school-demo-web/',
+  base: process.env.GITHUB_ACTIONS ? '/school-demo-web/' : '/',
   plugins: [
     react(),
     tailwindcss(),
