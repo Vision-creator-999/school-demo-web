@@ -216,9 +216,9 @@ export const Home: React.FC = () => {
                 <img
                   src={featureImages[idx]}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:scale-105 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-black/55 pointer-events-none" />
                 
                 <div className="relative z-10 mb-4 bg-white/15 p-3 rounded-full group-hover:bg-accent group-hover:text-primary transition-colors">
                   {getFeatureIcon(idx)}
@@ -259,8 +259,8 @@ export const Home: React.FC = () => {
               to="/portal/student"
               className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <img src="/students_activities.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <img src="https://www.vedantu.com/seo/content-images/95444fcf-ba1c-467b-85d5-e8d0fcb2c131.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
               <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <Users size={32} />
               </div>
@@ -282,8 +282,8 @@ export const Home: React.FC = () => {
               to="/portal/teacher"
               className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <img src="/activity_science.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmOES95iEN4MA0IosOwNQLIHeDP2-Ksz2Wgms_e1kiw&s=10" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
               <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <BookOpen size={32} />
               </div>
@@ -305,8 +305,8 @@ export const Home: React.FC = () => {
               to="/portal/admin"
               className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <img src="/school_campus.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdt86OTlEf2ZU7GZ1RHEQn_ibA1oqHMjyUBke49dJeQQ&s=10" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+              <div className="absolute inset-0 bg-white/80 pointer-events-none" />
               <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <ShieldCheck size={32} />
               </div>
@@ -348,8 +348,8 @@ export const Home: React.FC = () => {
             >
               {prog.image && (
                 <>
-                  <img src={prog.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-white/75 pointer-events-none" />
+                  <img src={prog.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-white/85 pointer-events-none" />
                 </>
               )}
               <div className="relative z-10">
@@ -403,7 +403,7 @@ export const Home: React.FC = () => {
                     <img
                       src={act.image}
                       alt={act.titleEn}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
                     <div className={`h-full ${act.bgClass} flex items-center justify-center relative overflow-hidden`}>
@@ -573,10 +573,10 @@ export const Home: React.FC = () => {
             <img
               src="/gallery_sports.png"
               alt="Annual Sports"
-              className="absolute inset-0 w-full h-full object-cover z-0 opacity-30 group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary-dark/80 to-primary-dark/45 z-0 pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(46,139,87,0.15),transparent_50%)] pointer-events-none z-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary-dark/85 to-primary-dark/65 z-0 pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(46,139,87,0.25),transparent_50%)] pointer-events-none z-0" />
             
             <div className="relative z-10">
               <span className="text-[10px] text-accent font-extrabold uppercase tracking-widest font-sans">
