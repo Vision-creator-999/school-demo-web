@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Devanagari:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-devanagari: "Noto Sans Devanagari", sans-serif;
+  
+  --color-primary: #1B4332;
+  --color-primary-dark: #112A1F;
+  --color-secondary: #2D3A34;
+  --color-accent: #D4E157;
+  --color-accent-light: #F0F4C3;
+  --color-cream: #F7F5E8;
+  --color-cream-dark: #ECEAD9;
+  --color-slate-body: #4B5A52;
+  --color-success: #16A34A;
+}
+
+body {
+  background-color: var(--color-accent);
+  color: var(--color-slate-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom styling utilities */
+.font-serif {
+  font-family: var(--font-sans);
+}
+
+.font-devanagari {
+  font-family: var(--font-devanagari), var(--font-sans);
+}
+
+/* Dynamic Font Class Helper based on Language */
+.lang-en {
+  font-family: var(--font-sans);
+}
+
+.lang-hi {
+  font-family: var(--font-devanagari);
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+  background: rgba(27, 67, 50, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.glass-card {
+  background: rgba(247, 245, 232, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(27, 67, 50, 0.12);
+}
+
+/* Custom loading bar keyframe animations */
+@keyframes loadingBar {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+.animate-loading-bar {
+  animation: loadingBar 1.2s ease-in-out infinite;
+}
+

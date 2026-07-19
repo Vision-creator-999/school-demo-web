@@ -1,0 +1,183 @@
+{
+  "school": {
+    "name": "Vidya Vihar Inter College",
+    "nameHindi": "विद्या विहार इंटर कॉलेज",
+    "location": "Salarpur, Varanasi, Uttar Pradesh",
+    "tagline": "Empowering Young Minds, Building Bright Futures",
+    "motto": "Knowledge is the Supreme Power"
+  },
+  "utility": {
+    "events": "Events",
+    "blogs": "Blogs",
+    "testimonials": "Testimonials",
+    "announcements": "Announcements",
+    "library": "Library Catalogue",
+    "schoolId": "School ID"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "teachers": "Teachers",
+    "notices": "Notices",
+    "admissions": "Admissions",
+    "gallery": "Gallery",
+    "contact": "Contact Us",
+    "portals": "Portals",
+    "applyNow": "Apply Now"
+  },
+  "home": {
+    "heroTitle": "Empowering Young Minds, Building Bright Futures",
+    "heroSubtitle": "Vidya Vihar Inter College, Salarpur, Varanasi, provides a value-based, high-fidelity academic environment. We foster core values, physical fitness, and technological competence for students from Nursery to Class 12 standard.",
+    "applyCTA": "Apply Now",
+    "stats": {
+      "students": "Students Enrolled",
+      "teachers": "Expert Educators",
+      "years": "Years of Excellence",
+      "results": "Board Result Success"
+    },
+    "features": {
+      "academic": {
+        "title": "Academic Excellence",
+        "desc": "Top Board exam scores and comprehensive guidance."
+      },
+      "holistic": {
+        "title": "Holistic Development",
+        "desc": "Balancing sports, cultural arts, and ethical grounding."
+      },
+      "innovative": {
+        "title": "Innovative Teaching",
+        "desc": "Interactive smart classrooms and experimental labs."
+      },
+      "supportive": {
+        "title": "Supportive Teachers",
+        "desc": "Caring, professional mentors guiding student success."
+      }
+    },
+    "programsTitle": "Our Programs",
+    "programsSub": "Select streams curated for academic proficiency and professional success.",
+    "activitiesTitle": "Our Best Activities",
+    "activitiesSub": "Encouraging students to explore talents through curated co-curricular clubs.",
+    "teachersTitle": "Teachers of Our School",
+    "teachersSub": "Meet the dedicated scholars guiding the next generation at Vidya Vihar.",
+    "meetTeachers": "Meet All Teachers",
+    "upcomingEventsTitle": "Upcoming Events",
+    "upcomingEventsSub": "Stay updated with scheduled assemblies, sports contests, and celebrations.",
+    "readMore": "Read more",
+    "noticesTitle": "Latest Notices & Circulars",
+    "viewAllNotices": "View All Notices",
+    "newsletter": {
+      "title": "Stay Connected with Vidya Vihar",
+      "desc": "Submit your email to receive school notifications, term schedules, and student newsletters.",
+      "placeholder": "Enter your email address...",
+      "button": "Subscribe",
+      "success": "Subscribed successfully! Thank you for staying connected.",
+      "error": "Please enter a valid email address."
+    }
+  },
+  "about": {
+    "title": "About",
+    "historyTitle": "Our History & Mission",
+    "historyDesc1": "Founded in 1995, Vidya Vihar Inter College in Salarpur, Varanasi was established with a vision to provide quality and affordable education to the children of Varanasi and neighboring areas. Starting as a primary school with only 50 students, it has grown over the years into a renowned Inter College with over 1,200 students.",
+    "historyDesc2": "Our mission is to foster a stimulating learning environment where students excel academically, develop critical thinking skills, and grow as morally upright individuals. We focus on holistic development through co-curricular activities, moral instruction, and physical education.",
+    "affiliation": "Affiliated under UP Madhyamik Shiksha Parishad & aligned with CBSE syllabus recommendations.",
+    "founderTitle": "Founder's Message",
+    "founderDesc": "\"Education is not just about loading the mind with facts. It is about lighting a spark that inspires students to explore, create, and contribute to society. At Vidya Vihar, we strive to make this spark shine bright in every child.\"",
+    "founderName": "- Shri R. K. Pandey, Founder & Chairman",
+    "timelineTitle": "Our Journey Over the Years"
+  },
+  "notices": {
+    "title": "School Notices & Circulars",
+    "subtitle": "Stay updated with the latest events, announcements, and scheduling details.",
+    "searchPlaceholder": "Search notices...",
+    "all": "All",
+    "academics": "Academics",
+    "events": "Events",
+    "admissions": "Admissions",
+    "general": "General",
+    "postedOn": "Posted on",
+    "noNotices": "No notices found matching your criteria."
+  },
+  "admissions": {
+    "title": "Admissions 2026-27",
+    "subtitle": "Join the Vidya Vihar family. Follow our simple admission procedure outlined below.",
+    "stepsTitle": "Step-by-Step Admission Process",
+    "steps": {
+      "step1": {
+        "title": "Enquiry & Registration",
+        "desc": "Submit the online enquiry form or visit the school reception to obtain the prospectus."
+      },
+      "step2": {
+        "title": "Document Verification",
+        "desc": "Submit required documents: Birth Certificate, Report Card, Transfer Certificate, and Aadhaar Card."
+      },
+      "step3": {
+        "title": "Interaction/Test",
+        "desc": "A general interaction for junior classes and a baseline assessment test for senior classes."
+      },
+      "step4": {
+        "title": "Fee Payment & Admission",
+        "desc": "Upon selection, pay the admission fee to secure the child's seat."
+      }
+    },
+    "formTitle": "Admission Enquiry Form",
+    "formSub": "Submit this enquiry, and our admissions team will contact you within 24-48 hours.",
+    "labels": {
+      "studentName": "Child's Full Name",
+      "parentName": "Parent / Guardian Name",
+      "classApplying": "Class Applying For",
+      "mobileNumber": "Mobile Number",
+      "selectClass": "Select Class",
+      "submit": "Submit Enquiry",
+      "submitting": "Submitting...",
+      "successTitle": "Enquiry Submitted Successfully!",
+      "successMsg": "Thank you for showing interest in Vidya Vihar Inter College. Our team will get in touch with you shortly on",
+      "ticketNum": "Your Enquiry Reference Ticket:"
+    },
+    "validation": {
+      "studentNameReq": "Child's name is required",
+      "parentNameReq": "Parent/Guardian name is required",
+      "classApplyingReq": "Please select a class",
+      "mobileNumberReq": "Mobile number is required",
+      "mobileNumberInvalid": "Please enter a valid 10-digit mobile number"
+    }
+  },
+  "gallery": {
+    "title": "School Gallery",
+    "subtitle": "A glimpse into life, celebrations, and achievements at Vidya Vihar Inter College.",
+    "all": "All Photos",
+    "events": "Events",
+    "sports": "Sports",
+    "academic": "Academic Life"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for any inquiries or to visit the school campus.",
+    "addressTitle": "School Address",
+    "phoneTitle": "Phone Numbers",
+    "emailTitle": "Email Address",
+    "hoursTitle": "Office Hours",
+    "hoursWeekdays": "Monday - Saturday: 8:00 AM - 2:00 PM",
+    "hoursSunday": "Sunday: Closed",
+    "mapTitle": "Find Us on Map"
+  },
+  "portal": {
+    "title": "School Portals",
+    "subtitle": "Access the digital management system. Select your portal to log in.",
+    "student": {
+      "title": "Student Portal",
+      "desc": "Check marks, attendance, homework, and pay school fees online."
+    },
+    "teacher": {
+      "title": "Teacher Portal",
+      "desc": "Manage grades, record attendance, post homework, and class notifications."
+    },
+    "admin": {
+      "title": "Admin Panel",
+      "desc": "Manage school records, staff accounts, admissions, and system configuration."
+    },
+    "comingSoon": "Coming Soon in Stage 2",
+    "backHome": "Back to Home",
+    "placeholderTitle": "Portal Under Development",
+    "placeholderDesc": "The School Portal features are part of Stage 2 of our digital transformation. We are currently implementing these systems. Thank you for your patience."
+  }
+}
