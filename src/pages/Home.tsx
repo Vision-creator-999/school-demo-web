@@ -139,8 +139,8 @@ export const Home: React.FC = () => {
         </h1>
 
         {/* Supporting paragraph in green text */}
-        <p className={`text-slate-body font-medium text-sm sm:text-base md:text-lg max-w-3xl leading-relaxed mb-8 ${
-          isHindi ? 'font-devanagari text-[17px]' : 'font-sans text-primary/80'
+        <p className={`text-heading font-medium text-sm sm:text-base md:text-lg max-w-3xl leading-relaxed mb-8 ${
+          isHindi ? 'font-devanagari text-[17px]' : 'font-sans'
         }`}>
           {t('home.heroSubtitle')}
         </p>
@@ -216,7 +216,7 @@ export const Home: React.FC = () => {
                 <h4 className={`text-base font-bold text-white mb-2 uppercase tracking-wide ${isHindi ? 'font-devanagari text-[15px]' : 'font-sans'}`}>
                   {t(`home.features.${featureKey}.title`)}
                 </h4>
-                <p className={`text-xs text-cream-dark/75 leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
+                <p className={`text-xs text-cream leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
                   {t(`home.features.${featureKey}.desc`)}
                 </p>
               </div>
@@ -235,7 +235,7 @@ export const Home: React.FC = () => {
               level={2}
               center={true}
             />
-            <p className={`text-slate-body/80 mt-3 text-sm max-w-2xl mx-auto ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+            <p className={`text-heading mt-3 text-sm max-w-2xl mx-auto ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
               {isHindi 
                 ? 'छात्रों, शिक्षकों और प्रशासनिक कर्मचारियों के लिए हमारे समर्पित डिजिटल प्रवेश द्वार।' 
                 : 'Our dedicated digital gateways for students, educators, and administrative staff members.'}
@@ -254,7 +254,7 @@ export const Home: React.FC = () => {
               <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'छात्र पोर्टल' : 'Student Portal'}
               </h4>
-              <p className="text-xs text-slate-body leading-relaxed mb-6">
+              <p className="text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
                   ? 'समय सारणी, गृहकार्य असाइनमेंट, परीक्षा परिणाम और दैनिक व्याख्यान विवरण देखें।' 
                   : 'Access time tables, assignments, exam result sheets, and daily scheduled lectures.'}
@@ -275,7 +275,7 @@ export const Home: React.FC = () => {
               <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'शिक्षक पोर्टल' : 'Teacher Portal'}
               </h4>
-              <p className="text-xs text-slate-body leading-relaxed mb-6">
+              <p className="text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
                   ? 'कक्षावार छात्र उपस्थिति अंकित करें, दैनिक लॉग दर्ज करें और अंक अपलोड करें।' 
                   : 'Log student attendance registers, track academic logs, and upload exam scores.'}
@@ -296,7 +296,7 @@ export const Home: React.FC = () => {
               <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'प्रशासक पोर्टल' : 'Admin Portal'}
               </h4>
-              <p className="text-xs text-slate-body leading-relaxed mb-6">
+              <p className="text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
                   ? 'छात्र-शिक्षक ऑनबोर्डिंग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
                   : 'Manage database backups, student onboarding records, and upload Excel files.'}
@@ -318,7 +318,7 @@ export const Home: React.FC = () => {
             level={2}
             center={true}
           />
-          <p className={`text-slate-body/80 mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+          <p className={`text-heading mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
             {t('home.programsSub')}
           </p>
         </div>
@@ -334,7 +334,7 @@ export const Home: React.FC = () => {
                 <h4 className={`text-lg font-bold text-primary mb-3 ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
                   {isHindi ? prog.titleHi : prog.titleEn}
                 </h4>
-                <p className={`text-xs text-slate-body/85 leading-relaxed mb-6 ${isHindi ? 'font-devanagari text-[14px] leading-relaxed' : 'font-sans'}`}>
+                <p className={`text-xs text-heading leading-relaxed mb-6 ${isHindi ? 'font-devanagari text-[14px] leading-relaxed' : 'font-sans'}`}>
                   {isHindi ? prog.descHi : prog.descEn}
                 </p>
               </div>
@@ -363,7 +363,7 @@ export const Home: React.FC = () => {
               level={2}
               center={true}
             />
-            <p className={`text-slate-body/85 mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+            <p className={`text-heading mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
               {t('home.activitiesSub')}
             </p>
           </div>
@@ -374,18 +374,27 @@ export const Home: React.FC = () => {
                 key={act.id}
                 className="group rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/50 bg-white flex flex-col justify-between"
               >
-                {/* Visual Color Block */}
-                <div className={`h-40 ${act.bgClass} flex items-center justify-center relative select-none overflow-hidden border-b border-slate-100`}>
-                  {/* Decorative background grid */}
-                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
-                  <span className="text-6xl transform group-hover:scale-115 group-hover:rotate-3 transition-transform duration-300 z-10" role="presentation">
-                    {act.emoji}
-                  </span>
+                {/* Visual Image Block */}
+                <div className="h-44 relative select-none overflow-hidden border-b border-slate-100">
+                  {act.image ? (
+                    <img
+                      src={act.image}
+                      alt={act.titleEn}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className={`h-full ${act.bgClass} flex items-center justify-center relative overflow-hidden`}>
+                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
+                      <span className="text-6xl transform group-hover:scale-115 group-hover:rotate-3 transition-transform duration-300 z-10" role="presentation">
+                        {act.emoji}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
-                {/* Bottom Overlay strip with italic dark-green text */}
+                {/* Bottom Overlay strip with bold black text */}
                 <div className="bg-white py-4 px-5 border-t border-slate-50 text-center">
-                  <span className={`text-sm font-bold text-primary italic block tracking-wide ${isHindi ? 'font-devanagari not-italic' : 'font-sans'}`}>
+                  <span className={`text-sm font-bold text-heading block tracking-wide ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
                     {isHindi ? act.titleHi : act.titleEn}
                   </span>
                 </div>
@@ -406,7 +415,7 @@ export const Home: React.FC = () => {
               {t('home.newsletter.title')}
             </h3>
             
-            <p className={`text-sm sm:text-base text-cream-dark/85 leading-relaxed max-w-2xl ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+            <p className={`text-sm sm:text-base text-cream leading-relaxed max-w-2xl ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
               {t('home.newsletter.desc')}
             </p>
 
@@ -472,7 +481,7 @@ export const Home: React.FC = () => {
               level={2}
               center={true}
             />
-            <p className={`text-slate-body/80 mt-3 text-sm max-w-2xl mx-auto ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+            <p className={`text-heading mt-3 text-sm max-w-2xl mx-auto ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
               {t('home.teachersSub')}
             </p>
           </div>
@@ -493,7 +502,7 @@ export const Home: React.FC = () => {
                   {isHindi ? teach.nameHi : teach.nameEn}
                 </h4>
                 
-                <span className={`text-[10px] text-slate-400 font-bold uppercase tracking-wider ${isHindi ? 'font-devanagari' : ''}`}>
+                <span className={`text-[10px] text-heading font-bold uppercase tracking-wider ${isHindi ? 'font-devanagari' : ''}`}>
                   {isHindi ? teach.roleHi : teach.roleEn}
                 </span>
               </div>
@@ -520,7 +529,7 @@ export const Home: React.FC = () => {
             level={2}
             center={true}
           />
-          <p className={`text-slate-body/85 mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+          <p className={`text-heading mt-3 text-sm ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
             {t('home.upcomingEventsSub')}
           </p>
         </div>
@@ -545,7 +554,7 @@ export const Home: React.FC = () => {
               <h4 className={`text-2xl font-black mt-2 leading-tight ${isHindi ? 'font-devanagari text-xl' : 'font-serif'}`}>
                 {isHindi ? 'वार्षिक खेलकूद एवं एथलेटिक्स मीट' : 'Annual Sports & Athletic Meet'}
               </h4>
-              <p className={`text-xs text-cream-dark/85 mt-3 leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
+              <p className={`text-xs text-cream mt-3 leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
                 {isHindi
                   ? 'छात्रों में खेल भावना और शारीरिक तंदुरुस्ती को बढ़ावा देने के लिए एक सप्ताह चलने वाला खेल उत्सव, जिसमें विभिन्न हाउस प्रतियोगिताएं होंगी।'
                   : 'A week-long athletic festival fostering sportsmanship, physical competence, and house competitions across track, field, and team sports.'}
@@ -584,7 +593,7 @@ export const Home: React.FC = () => {
                   <h4 className={`text-sm sm:text-base font-bold text-primary mt-1.5 truncate ${isHindi ? 'font-devanagari text-base' : 'font-sans'}`}>
                     {isHindi ? evt.titleHi : evt.titleEn}
                   </h4>
-                  <div className="flex gap-4 text-xs text-slate-400 mt-1 font-sans">
+                  <div className="flex gap-4 text-xs text-heading mt-1 font-sans">
                     <span>🕒 {isHindi ? evt.timeHi : evt.timeEn}</span>
                     <span>📍 School Grounds</span>
                   </div>
@@ -593,7 +602,7 @@ export const Home: React.FC = () => {
                 {/* Read More Link */}
                 <Link
                   to="/notices"
-                  className="text-xs font-bold text-slate-400 hover:text-accent transition-colors shrink-0 font-sans"
+                  className="text-xs font-bold text-heading hover:text-accent transition-colors shrink-0 font-sans"
                 >
                   {t('home.readMore')} →
                 </Link>

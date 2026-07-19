@@ -44,6 +44,7 @@ export interface Activity {
   titleHi: string;
   emoji: string;
   bgClass: string;
+  image?: string;
 }
 
 export interface Teacher {
@@ -260,42 +261,48 @@ export const activitiesData: Activity[] = [
     titleEn: 'Sports & Athletics',
     titleHi: 'खेल-कूद और एथलेटिक्स',
     emoji: '⚽',
-    bgClass: 'bg-emerald-50 hover:bg-emerald-100/50'
+    bgClass: 'bg-emerald-50 hover:bg-emerald-100/50',
+    image: '/activity_sports.png'
   },
   {
     id: 'a2',
     titleEn: 'Cultural Activities',
     titleHi: 'सांस्कृतिक गतिविधियां',
     emoji: '🎭',
-    bgClass: 'bg-amber-50 hover:bg-amber-100/50'
+    bgClass: 'bg-amber-50 hover:bg-amber-100/50',
+    image: '/activity_cultural.png'
   },
   {
     id: 'a3',
     titleEn: 'Visual Arts & Crafts',
     titleHi: 'दृश्य कला और शिल्प',
     emoji: '🎨',
-    bgClass: 'bg-blue-50 hover:bg-blue-100/50'
+    bgClass: 'bg-blue-50 hover:bg-blue-100/50',
+    image: '/activity_arts.png'
   },
   {
     id: 'a4',
     titleEn: 'Academic & Science Clubs',
     titleHi: 'शैक्षणिक और विज्ञान क्लब',
     emoji: '🔬',
-    bgClass: 'bg-purple-50 hover:bg-purple-100/50'
+    bgClass: 'bg-purple-50 hover:bg-purple-100/50',
+    image: '/activity_science.png'
   },
   {
     id: 'a5',
     titleEn: 'Community Events & NSS',
     titleHi: 'सामुदायिक कार्यक्रम एवं एनएसएस',
     emoji: '🤝',
-    bgClass: 'bg-pink-50 hover:bg-pink-100/50'
+    bgClass: 'bg-pink-50 hover:bg-pink-100/50',
+    image: '/activity_community.png'
   },
   {
     id: 'a6',
     titleEn: 'Special Assemblies & Festivals',
     titleHi: 'विशेष सभाएं और त्योहार',
     emoji: '🎪',
-    bgClass: 'bg-orange-50 hover:bg-orange-100/50'
+    bgClass: 'bg-orange-50 hover:bg-orange-100/50',
+    image: '/activity_festivals.png'
   }
 ];
 
