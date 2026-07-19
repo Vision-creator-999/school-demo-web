@@ -5,19 +5,23 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-devanagari: "Noto Sans Devanagari", sans-serif;
   
-  --color-primary: #1B4332;
-  --color-primary-dark: #112A1F;
-  --color-secondary: #2D3A34;
-  --color-accent: #D4E157;
-  --color-accent-light: #F0F4C3;
-  --color-cream: #F7F5E8;
-  --color-cream-dark: #ECEAD9;
-  --color-slate-body: #4B5A52;
-  --color-success: #16A34A;
+  --color-primary: #0F8B8D;
+  --color-primary-dark: #0B6B6D;
+  --color-secondary: #17375E;
+  --color-secondary-dark: #0F233D;
+  --color-accent: #F97316;
+  --color-accent-light: #FFEDD5;
+  --color-cream: #F8FAFC;
+  --color-cream-dark: #E2E8F0;
+  --color-slate-body: #64748B;
+  --color-heading: #1E293B;
+  --color-success: #22C55E;
+  --color-warning: #FBBF24;
+  --color-border: #E5E7EB;
 }
 
 body {
-  background-color: var(--color-accent);
+  background-color: var(--color-cream);
   color: var(--color-slate-body);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

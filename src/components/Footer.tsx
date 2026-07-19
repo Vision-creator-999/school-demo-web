@@ -13,8 +13,7 @@ export const Footer: React.FC = () => {
     { to: '/notices', labelKey: 'nav.notices' },
     { to: '/admissions', labelKey: 'nav.admissions' },
     { to: '/gallery', labelKey: 'nav.gallery' },
-    { to: '/contact', labelKey: 'nav.contact' },
-    { to: '/portal', labelKey: 'nav.portals' }
+    { to: '/contact', labelKey: 'nav.contact' }
   ];
 
   return (

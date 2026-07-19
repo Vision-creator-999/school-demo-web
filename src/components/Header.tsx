@@ -20,6 +20,7 @@ export const Header: React.FC = () => {
     { to: '/admissions', labelKey: 'nav.admissions' },
     { to: '/gallery', labelKey: 'nav.gallery' },
     { to: '/contact', labelKey: 'nav.contact' },
+    { to: '/portal', labelKey: 'nav.portals' },
   ];
 
   const handleNavItemClick = (item: { to: string; isHash?: boolean }) => {

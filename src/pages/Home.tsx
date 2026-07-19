@@ -225,6 +225,90 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* QUICK ACCESS PORTAL OPTIONS */}
+      <section className="py-16 bg-cream border-b border-slate-200/50 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <BilingualHeading
+              english="Academic & Administrative Portals"
+              hindi="अकादमिक एवं प्रशासनिक पोर्टल"
+              level={2}
+              center={true}
+            />
+            <p className={`text-slate-body/80 mt-3 text-sm max-w-2xl mx-auto ${isHindi ? 'font-devanagari text-[16px]' : 'font-sans'}`}>
+              {isHindi 
+                ? 'छात्रों, शिक्षकों और प्रशासनिक कर्मचारियों के लिए हमारे समर्पित डिजिटल प्रवेश द्वार।' 
+                : 'Our dedicated digital gateways for students, educators, and administrative staff members.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto font-sans">
+            {/* Student Portal Card */}
+            <Link
+              to="/portal/student"
+              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+            >
+              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+                <Users size={32} />
+              </div>
+              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                {isHindi ? 'छात्र पोर्टल' : 'Student Portal'}
+              </h4>
+              <p className="text-xs text-slate-body leading-relaxed mb-6">
+                {isHindi 
+                  ? 'समय सारणी, गृहकार्य असाइनमेंट, परीक्षा परिणाम और दैनिक व्याख्यान विवरण देखें।' 
+                  : 'Access time tables, assignments, exam result sheets, and daily scheduled lectures.'}
+              </p>
+              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+              </span>
+            </Link>
+
+            {/* Teacher Portal Card */}
+            <Link
+              to="/portal/teacher"
+              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+            >
+              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+                <BookOpen size={32} />
+              </div>
+              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                {isHindi ? 'शिक्षक पोर्टल' : 'Teacher Portal'}
+              </h4>
+              <p className="text-xs text-slate-body leading-relaxed mb-6">
+                {isHindi 
+                  ? 'कक्षावार छात्र उपस्थिति अंकित करें, दैनिक लॉग दर्ज करें और अंक अपलोड करें।' 
+                  : 'Log student attendance registers, track academic logs, and upload exam scores.'}
+              </p>
+              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+              </span>
+            </Link>
+
+            {/* Admin Portal Card */}
+            <Link
+              to="/portal/admin"
+              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+            >
+              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+                <ShieldCheck size={32} />
+              </div>
+              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+                {isHindi ? 'प्रशासक पोर्टल' : 'Admin Portal'}
+              </h4>
+              <p className="text-xs text-slate-body leading-relaxed mb-6">
+                {isHindi 
+                  ? 'छात्र-शिक्षक ऑनबोर्डिंग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
+                  : 'Manage database backups, student onboarding records, and upload Excel files.'}
+              </p>
+              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+                {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 3. OUR PROGRAMS SECTION */}
       <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full bg-cream">
         <div className="mb-12 text-center">
