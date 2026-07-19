@@ -67,25 +67,34 @@ export const Gallery: React.FC = () => {
               className="group bg-white rounded-lg overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer"
             >
               
-              {/* Photo Placeholder Card */}
-              <div className={`relative h-60 w-full ${item.colorClass} flex flex-col items-center justify-center p-6 text-center select-none overflow-hidden`}>
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] group-hover:scale-110 transition-transform duration-500" />
-                
+              {/* Photo Card */}
+              <div className="relative h-60 w-full overflow-hidden select-none">
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.titleEn}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className={`relative h-full w-full ${item.colorClass} flex flex-col items-center justify-center p-6 text-center overflow-hidden`}>
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] group-hover:scale-110 transition-transform duration-500" />
+                    
+                    {/* Styled Emoji Emblem */}
+                    <div className="text-6xl transform group-hover:scale-125 group-hover:rotate-6 transition-transform duration-300 mb-4 drop-shadow-md">
+                      {item.emoji}
+                    </div>
+
+                    <div className="flex items-center gap-1 text-[11px] text-cream/70 font-sans mt-2">
+                      <ImageIcon size={12} />
+                      <span>Photo Placeholder</span>
+                    </div>
+                  </div>
+                )}
                 {/* Floating Category Tag */}
-                <span className="absolute top-4 left-4 bg-primary-dark/40 text-cream px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider backdrop-blur-xs font-sans">
+                <span className="absolute top-4 left-4 bg-primary-dark/80 text-cream px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider backdrop-blur-xs font-sans z-10">
                   {item.category}
                 </span>
-
-                {/* Styled Emoji Emblem */}
-                <div className="text-6xl transform group-hover:scale-125 group-hover:rotate-6 transition-transform duration-300 mb-4 drop-shadow-md">
-                  {item.emoji}
-                </div>
-
-                <div className="flex items-center gap-1 text-[11px] text-cream/70 font-sans mt-2">
-                  <ImageIcon size={12} />
-                  <span>Photo Placeholder</span>
-                </div>
               </div>
 
               {/* Caption and Date */}

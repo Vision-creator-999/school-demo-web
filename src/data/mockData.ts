@@ -25,6 +25,7 @@ export interface GalleryItem {
   colorClass: string;
   emoji: string;
   date: string;
+  image?: string;
 }
 
 export interface Program {
@@ -157,7 +158,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'वार्षिक खेलकूद प्रतियोगिता - ट्रैक इवेंट्स',
     colorClass: 'bg-emerald-800 text-white',
     emoji: '🏃‍♂️🏆',
-    date: 'December 2025'
+    date: 'December 2025',
+    image: '/gallery_sports.png'
   },
   {
     id: 'g2',
@@ -166,7 +168,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'स्वतंत्रता दिवस सांस्कृतिक कार्यक्रम',
     colorClass: 'bg-primary text-white',
     emoji: '🇮🇳🎭',
-    date: 'August 2025'
+    date: 'August 2025',
+    image: '/school_campus.png'
   },
   {
     id: 'g3',
@@ -175,7 +178,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'भौतिक विज्ञान प्रयोगशाला - प्रयोगात्मक सत्र',
     colorClass: 'bg-emerald-900 text-white',
     emoji: '🔬⚡',
-    date: 'November 2025'
+    date: 'November 2025',
+    image: '/students_activities.png'
   },
   {
     id: 'g4',
@@ -184,7 +188,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'सरस्वती पूजा समारोह एवं आरती',
     colorClass: 'bg-amber-700/80 text-white',
     emoji: '🪕🙏',
-    date: 'February 2026'
+    date: 'February 2026',
+    image: '/gallery_saraswati.png'
   },
   {
     id: 'g5',
@@ -193,7 +198,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'कंप्यूटर लैब - कोडिंग कार्यशाला',
     colorClass: 'bg-slate-700 text-white',
     emoji: '💻⚙️',
-    date: 'October 2025'
+    date: 'October 2025',
+    image: '/students_activities.png'
   },
   {
     id: 'g6',
@@ -202,7 +208,8 @@ export const galleryData: GalleryItem[] = [
     titleHi: 'वार्षिक विज्ञान एवं शिल्प प्रदर्शनी',
     colorClass: 'bg-primary-dark text-white',
     emoji: '🌋🎨',
-    date: 'January 2026'
+    date: 'January 2026',
+    image: '/gallery_science.png'
   }
 ];
 

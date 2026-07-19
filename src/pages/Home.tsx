@@ -528,25 +528,31 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
           {/* Highlight Left Panel: Event Photo/Card */}
-          <div className="lg:col-span-5 relative flex flex-col justify-between bg-primary text-cream p-8 rounded-xl border border-white/5 shadow-md overflow-hidden">
-            {/* Background watermarks */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(212,225,87,0.08),transparent_50%)] pointer-events-none" />
+          <div className="lg:col-span-5 relative flex flex-col justify-between bg-primary text-cream p-8 rounded-xl border border-white/5 shadow-md overflow-hidden group">
+            {/* Background image & gradient overlays */}
+            <img
+              src="/gallery_sports.png"
+              alt="Annual Sports"
+              className="absolute inset-0 w-full h-full object-cover z-0 opacity-30 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary-dark/80 to-primary-dark/45 z-0 pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(46,139,87,0.15),transparent_50%)] pointer-events-none z-0" />
             
-            <div>
+            <div className="relative z-10">
               <span className="text-[10px] text-accent font-extrabold uppercase tracking-widest font-sans">
                 ⭐ Featured Event
               </span>
               <h4 className={`text-2xl font-black mt-2 leading-tight ${isHindi ? 'font-devanagari text-xl' : 'font-serif'}`}>
                 {isHindi ? 'वार्षिक खेलकूद एवं एथलेटिक्स मीट' : 'Annual Sports & Athletic Meet'}
               </h4>
-              <p className={`text-xs text-cream-dark/75 mt-3 leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
+              <p className={`text-xs text-cream-dark/85 mt-3 leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
                 {isHindi
                   ? 'छात्रों में खेल भावना और शारीरिक तंदुरुस्ती को बढ़ावा देने के लिए एक सप्ताह चलने वाला खेल उत्सव, जिसमें विभिन्न हाउस प्रतियोगिताएं होंगी।'
                   : 'A week-long athletic festival fostering sportsmanship, physical competence, and house competitions across track, field, and team sports.'}
               </p>
             </div>
 
-            <div className="mt-8 border-t border-white/10 pt-4 flex justify-between items-center text-xs font-bold font-sans">
+            <div className="relative z-10 mt-8 border-t border-white/15 pt-4 flex justify-between items-center text-xs font-bold font-sans">
               <span className="text-accent">📍 Varanasi Main Stadium</span>
               <span className="text-white">📅 Nov 2026</span>
             </div>
