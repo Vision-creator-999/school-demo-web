@@ -617,11 +617,10 @@ export const Home: React.FC = () => {
               alt="Annual Sports"
               className="absolute inset-0 w-full h-full object-cover z-0 opacity-70 group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary-dark/85 to-primary-dark/65 z-0 pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(46,139,87,0.25),transparent_50%)] pointer-events-none z-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/35 z-0 pointer-events-none" />
             
             <div className="relative z-10">
-              <span className="text-[10px] text-accent font-extrabold uppercase tracking-widest font-sans">
+              <span className="text-[10px] text-amber-300 font-extrabold uppercase tracking-widest font-sans">
                 ⭐ Featured Event
               </span>
               <h4 className={`text-2xl font-black mt-2 leading-tight ${isHindi ? 'font-devanagari text-xl' : 'font-serif'}`}>
@@ -635,7 +634,7 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="relative z-10 mt-8 border-t border-white/15 pt-4 flex justify-between items-center text-xs font-bold font-sans">
-              <span className="text-accent">📍 Varanasi Main Stadium</span>
+              <span className="text-amber-300">📍 Varanasi Main Stadium</span>
               <span className="text-white">📅 Nov 2026</span>
             </div>
           </div>
