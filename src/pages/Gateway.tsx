@@ -39,7 +39,7 @@ export const Gateway: React.FC = () => {
           src={src}
           alt="Vidya Vihar Campus"
           className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ease-in-out scale-105 ${
-            index === bgIndex ? 'opacity-40 z-0' : 'opacity-0 -z-10'
+            index === bgIndex ? 'opacity-70 z-0' : 'opacity-0 -z-10'
           }`}
         />
       ))}
@@ -89,9 +89,9 @@ export const Gateway: React.FC = () => {
             <img
               src="https://www.entrepreneurindia.com/img/1600x940/uploads/content/edu/art/5bb1d555195d0.jpeg"
               alt="CBSE Students"
-              className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:scale-110 transition-transform duration-700 pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700 pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/80 to-slate-950/60 pointer-events-none" />
 
             <div className="relative z-10 w-full">
               <div className="inline-flex items-center gap-1.5 bg-teal-400/20 border border-teal-400/40 backdrop-blur-md px-3 py-1 rounded-md text-teal-300 text-[11px] font-extrabold uppercase tracking-wider mb-5">
@@ -122,9 +122,9 @@ export const Gateway: React.FC = () => {
             <img
               src="https://akm-img-a-in.tosshub.com/aajtak/images/story/202203/students_44_1-sixteen_nine_0.jpg?size=948:533"
               alt="UP Board Students"
-              className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:scale-110 transition-transform duration-700 pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700 pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/80 to-slate-950/60 pointer-events-none" />
 
             <div className="relative z-10 w-full">
               <div className="inline-flex items-center gap-1.5 bg-amber-400/20 border border-amber-400/40 backdrop-blur-md px-3 py-1 rounded-md text-amber-300 text-[11px] font-extrabold uppercase tracking-wider mb-5">
