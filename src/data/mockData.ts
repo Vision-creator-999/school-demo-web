@@ -36,6 +36,7 @@ export interface Program {
   descHi: string;
   emoji: string;
   bgClass: string;
+  image?: string;
 }
 
 export interface Activity {
@@ -55,6 +56,7 @@ export interface Teacher {
   roleHi: string;
   circleColor: string; // yellow, blue, gray, purple, orange color mappings
   initials: string;
+  image?: string;
 }
 
 export interface UpcomingEvent {
@@ -223,7 +225,8 @@ export const programsData: Program[] = [
     descEn: 'Comprehensive study of Physics, Chemistry, Mathematics, and Biology preparing students for engineering, medical, and scientific research pursuits.',
     descHi: 'भौतिक विज्ञान, रसायन विज्ञान, गणित और जीव विज्ञान का व्यापक अध्ययन, जो छात्रों को इंजीनियरिंग, मेडिकल और वैज्ञानिक अनुसंधान के लिए तैयार करता है।',
     emoji: '🔬',
-    bgClass: 'bg-emerald-50 border-emerald-100 hover:border-emerald-300'
+    bgClass: 'bg-emerald-50 border-emerald-100 hover:border-emerald-300',
+    image: '/activity_science.png'
   },
   {
     id: 'p2',
@@ -232,7 +235,8 @@ export const programsData: Program[] = [
     descEn: 'Focused curriculum in Accountancy, Business Studies, Economics, and Mathematics aimed at career pathways in finance, business management, and administration.',
     descHi: 'लेखाशास्त्र, व्यावसायिक अध्ययन, अर्थशास्त्र और गणित में केंद्रित पाठ्यक्रम, जिसका उद्देश्य वित्त, व्यवसाय प्रबंधन और प्रशासन में करियर बनाना है।',
     emoji: '📈',
-    bgClass: 'bg-blue-50 border-blue-100 hover:border-blue-300'
+    bgClass: 'bg-blue-50 border-blue-100 hover:border-blue-300',
+    image: '/students_activities.png'
   },
   {
     id: 'p3',
@@ -241,7 +245,8 @@ export const programsData: Program[] = [
     descEn: 'Rich academic exploration of History, Geography, Political Science, Economics, and Languages to foster critical thinking and social awareness.',
     descHi: 'इतिहास, भूगोल, राजनीति विज्ञान, अर्थशास्त्र और भाषाओं का समृद्ध शैक्षणिक अध्ययन, जो आलोचनात्मक सोच और सामाजिक जागरूकता को बढ़ावा देता है।',
     emoji: '🎨',
-    bgClass: 'bg-purple-50 border-purple-100 hover:border-purple-300'
+    bgClass: 'bg-purple-50 border-purple-100 hover:border-purple-300',
+    image: '/activity_arts.png'
   },
   {
     id: 'p4',
@@ -250,7 +255,8 @@ export const programsData: Program[] = [
     descEn: 'Holistic growth through computing literacy, creative crafts, basic electrical/agricultural skills, and cultural arts to prepare students for real-world endeavors.',
     descHi: 'कंप्यूटिंग साक्षरता, रचनात्मक शिल्प, बुनियादी इलेक्ट्रिकल/कृषि कौशल और सांस्कृतिक कलाओं के माध्यम से सर्वांगीण विकास ताकि छात्रों को व्यावहारिक जीवन के लिए तैयार किया जा सके।',
     emoji: '🎭',
-    bgClass: 'bg-amber-50 border-amber-100 hover:border-amber-300'
+    bgClass: 'bg-amber-50 border-amber-100 hover:border-amber-300',
+    image: '/activity_cultural.png'
   }
 ];
 
@@ -315,7 +321,8 @@ export const teachersData: Teacher[] = [
     roleEn: 'Senior Lecturer, Biology',
     roleHi: 'वरिष्ठ प्रवक्ता, जीव विज्ञान',
     circleColor: 'bg-blue-100 text-blue-700',
-    initials: 'SR'
+    initials: 'SR',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg'
   },
   {
     id: 't2',
@@ -324,7 +331,8 @@ export const teachersData: Teacher[] = [
     roleEn: 'Lecturer, Mathematics',
     roleHi: 'प्रवक्ता, गणित',
     circleColor: 'bg-yellow-100 text-yellow-700',
-    initials: 'AS'
+    initials: 'AS',
+    image: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
     id: 't3',
@@ -333,7 +341,8 @@ export const teachersData: Teacher[] = [
     roleEn: 'Senior Faculty, Hindi & Sanskrit',
     roleHi: 'वरिष्ठ संकाय, हिंदी और संस्कृत',
     circleColor: 'bg-orange-100 text-orange-700',
-    initials: 'RV'
+    initials: 'RV',
+    image: 'https://randomuser.me/api/portraits/men/75.jpg'
   },
   {
     id: 't4',
@@ -342,7 +351,8 @@ export const teachersData: Teacher[] = [
     roleEn: 'Lecturer, Accountancy & Economics',
     roleHi: 'प्रवक्ता, लेखाशास्त्र और अर्थशास्त्र',
     circleColor: 'bg-purple-100 text-purple-700',
-    initials: 'PP'
+    initials: 'PP',
+    image: 'https://randomuser.me/api/portraits/women/68.jpg'
   },
   {
     id: 't5',
@@ -351,7 +361,8 @@ export const teachersData: Teacher[] = [
     roleEn: 'Lecturer, English Language',
     roleHi: 'प्रवक्ता, अंग्रेजी भाषा',
     circleColor: 'bg-gray-100 text-gray-700',
-    initials: 'DW'
+    initials: 'DW',
+    image: 'https://randomuser.me/api/portraits/men/52.jpg'
   }
 ];
 

@@ -205,22 +205,33 @@ export const Home: React.FC = () => {
       <section className="bg-primary text-white py-12 border-t border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {['academic', 'holistic', 'innovative', 'supportive'].map((featureKey, idx) => (
+            {['academic', 'holistic', 'innovative', 'supportive'].map((featureKey, idx) => {
+              const featureImages = ['/students_activities.png', '/activity_sports.png', '/activity_science.png', '/activity_community.png'];
+              return (
               <div
                 key={featureKey}
-                className="bg-primary-dark/40 border border-white/10 hover:border-accent/40 rounded-xl p-6 transition-all duration-300 flex flex-col items-center text-center group"
+                className="relative border border-white/10 hover:border-accent/40 rounded-xl p-6 transition-all duration-300 flex flex-col items-center text-center group overflow-hidden"
               >
-                <div className="mb-4 bg-white/10 p-3 rounded-full group-hover:bg-accent group-hover:text-primary transition-colors">
+                {/* Background Image */}
+                <img
+                  src={featureImages[idx]}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 pointer-events-none" />
+                
+                <div className="relative z-10 mb-4 bg-white/15 p-3 rounded-full group-hover:bg-accent group-hover:text-primary transition-colors">
                   {getFeatureIcon(idx)}
                 </div>
-                <h4 className={`text-base font-bold text-white mb-2 uppercase tracking-wide ${isHindi ? 'font-devanagari text-[15px]' : 'font-sans'}`}>
+                <h4 className={`relative z-10 text-base font-bold text-white mb-2 uppercase tracking-wide ${isHindi ? 'font-devanagari text-[15px]' : 'font-sans'}`}>
                   {t(`home.features.${featureKey}.title`)}
                 </h4>
-                <p className={`text-xs text-cream leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
+                <p className={`relative z-10 text-xs text-white leading-relaxed ${isHindi ? 'font-devanagari text-[13.5px] leading-relaxed' : 'font-sans'}`}>
                   {t(`home.features.${featureKey}.desc`)}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -246,20 +257,22 @@ export const Home: React.FC = () => {
             {/* Student Portal Card */}
             <Link
               to="/portal/student"
-              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+              <img src="/students_activities.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <Users size={32} />
               </div>
-              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'छात्र पोर्टल' : 'Student Portal'}
               </h4>
-              <p className="text-xs text-heading leading-relaxed mb-6">
+              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
                   ? 'समय सारणी, गृहकार्य असाइनमेंट, परीक्षा परिणाम और दैनिक व्याख्यान विवरण देखें।' 
                   : 'Access time tables, assignments, exam result sheets, and daily scheduled lectures.'}
               </p>
-              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
                 {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
               </span>
             </Link>
@@ -267,20 +280,22 @@ export const Home: React.FC = () => {
             {/* Teacher Portal Card */}
             <Link
               to="/portal/teacher"
-              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+              <img src="/activity_science.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <BookOpen size={32} />
               </div>
-              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'शिक्षक पोर्टल' : 'Teacher Portal'}
               </h4>
-              <p className="text-xs text-heading leading-relaxed mb-6">
+              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
                   ? 'कक्षावार छात्र उपस्थिति अंकित करें, दैनिक लॉग दर्ज करें और अंक अपलोड करें।' 
                   : 'Log student attendance registers, track academic logs, and upload exam scores.'}
               </p>
-              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
                 {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
               </span>
             </Link>
@@ -288,20 +303,22 @@ export const Home: React.FC = () => {
             {/* Admin Portal Card */}
             <Link
               to="/portal/admin"
-              className="bg-white hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer"
+              className="relative hover:border-primary border border-slate-200 p-8 rounded-xl shadow-xs transition-all duration-300 group hover:-translate-y-1 flex flex-col items-center text-center cursor-pointer overflow-hidden"
             >
-              <div className="bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
+              <img src="/school_campus.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+              <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+              <div className="relative z-10 bg-primary/10 text-primary p-4 rounded-full mb-4 group-hover:bg-primary group-hover:text-cream transition-colors">
                 <ShieldCheck size={32} />
               </div>
-              <h4 className="text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
+              <h4 className="relative z-10 text-base font-extrabold text-secondary mb-2 uppercase tracking-wide group-hover:text-primary transition-colors">
                 {isHindi ? 'प्रशासक पोर्टल' : 'Admin Portal'}
               </h4>
-              <p className="text-xs text-heading leading-relaxed mb-6">
+              <p className="relative z-10 text-xs text-heading leading-relaxed mb-6">
                 {isHindi 
-                  ? 'छात्र-शिक्षक ऑनबोर्डिंग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
+                  ? 'छात्र-शिक्षक ऑनबोर्डिणग, डेटाबेस बैकअप और थोक एक्सेल शीट आयात का प्रबंधन करें।' 
                   : 'Manage database backups, student onboarding records, and upload Excel files.'}
               </p>
-              <span className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
+              <span className="relative z-10 text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5 mt-auto">
                 {isHindi ? 'पोर्टल खोलें' : 'Enter Portal'} <ArrowRight size={13} />
               </span>
             </Link>
@@ -327,9 +344,15 @@ export const Home: React.FC = () => {
           {programsData.map((prog) => (
             <div
               key={prog.id}
-              className={`rounded-xl border p-6 shadow-xs flex flex-col justify-between hover:shadow-md transition-all duration-300 bg-white ${prog.bgClass}`}
+              className={`relative rounded-xl border p-6 shadow-xs flex flex-col justify-between hover:shadow-md transition-all duration-300 overflow-hidden group ${prog.bgClass}`}
             >
-              <div>
+              {prog.image && (
+                <>
+                  <img src={prog.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-white/75 pointer-events-none" />
+                </>
+              )}
+              <div className="relative z-10">
                 <span className="text-4xl mb-4 block" role="presentation">{prog.emoji}</span>
                 <h4 className={`text-lg font-bold text-primary mb-3 ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
                   {isHindi ? prog.titleHi : prog.titleEn}
@@ -341,7 +364,7 @@ export const Home: React.FC = () => {
               
               <Link
                 to="/admissions"
-                className={`flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors w-fit font-sans`}
+                className={`relative z-10 flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors w-fit font-sans`}
               >
                 <span>{isHindi ? 'विवरण देखें' : 'View Admission'}</span>
                 <ArrowRight size={13} />
@@ -493,10 +516,18 @@ export const Home: React.FC = () => {
                 key={teach.id}
                 className="flex flex-col items-center p-4 bg-white rounded-xl border border-slate-200/40 shadow-2xs hover:shadow-sm transition-shadow duration-300"
               >
-                {/* Circular Avatar inside designated background color */}
-                <div className={`h-20 w-20 rounded-full border-2 flex items-center justify-center text-xl font-extrabold shadow-inner mb-4 select-none font-sans ${getTeacherBg(teach.circleColor)}`}>
-                  {teach.initials}
-                </div>
+                {/* Circular Avatar */}
+                {teach.image ? (
+                  <img
+                    src={teach.image}
+                    alt={teach.nameEn}
+                    className="h-20 w-20 rounded-full border-2 border-primary/20 object-cover shadow-md mb-4 select-none"
+                  />
+                ) : (
+                  <div className={`h-20 w-20 rounded-full border-2 flex items-center justify-center text-xl font-extrabold shadow-inner mb-4 select-none font-sans ${getTeacherBg(teach.circleColor)}`}>
+                    {teach.initials}
+                  </div>
+                )}
                 
                 <h4 className={`text-sm font-bold text-secondary mb-1 ${isHindi ? 'font-devanagari' : 'font-sans'}`}>
                   {isHindi ? teach.nameHi : teach.nameEn}

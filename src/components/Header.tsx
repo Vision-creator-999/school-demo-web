@@ -53,14 +53,14 @@ export const Header: React.FC = () => {
     <header className="w-full z-50">
       
       {/* 1. UTILITY TOP BAR (Lime-green strip) */}
-      <div className="bg-accent text-primary-dark font-sans py-2 px-4 sm:px-6 lg:px-8 border-b border-primary/5 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div className="bg-accent text-white font-sans py-2 px-4 sm:px-6 lg:px-8 border-b border-primary/5 flex flex-col md:flex-row justify-between items-center gap-3">
         {/* Quick Links Left */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold uppercase tracking-wider">
           {utilityLinks.map((link) => (
             <Link
               key={link.labelKey}
               to={link.href}
-              className="hover:text-primary transition-colors cursor-pointer"
+              className="hover:text-cream-dark transition-colors cursor-pointer"
             >
               {t(link.labelKey)}
             </Link>
@@ -69,12 +69,12 @@ export const Header: React.FC = () => {
 
         {/* Contacts & Switcher Right */}
         <div className="flex items-center gap-4 text-xs font-semibold">
-          <a href="tel:+919450123456" className="flex items-center gap-1 hover:text-primary transition-colors">
+          <a href="tel:+919450123456" className="flex items-center gap-1 hover:text-cream-dark transition-colors">
             <Phone size={12} />
             <span>+91 94501 23456</span>
           </a>
           <span className="opacity-20">|</span>
-          <a href="mailto:info@vidyaviharvaranasi.org" className="flex items-center gap-1 hover:text-primary transition-colors">
+          <a href="mailto:info@vidyaviharvaranasi.org" className="flex items-center gap-1 hover:text-cream-dark transition-colors">
             <Mail size={12} />
             <span className="hidden sm:inline">info@vidyaviharvaranasi.org</span>
           </a>
