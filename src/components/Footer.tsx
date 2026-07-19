@@ -3,17 +3,23 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Clock, School } from 'lucide-react';
 
+import { useLocation } from 'react-router-dom';
+
 export const Footer: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const isHindi = i18n.language === 'hi';
+  const isHindiPath = isHindi || location.pathname.includes('_hindi');
+
+  const homePath = isHindiPath ? '/home_hindi' : '/home';
 
   const quickLinks = [
-    { to: '/', labelKey: 'nav.home' },
-    { to: '/about', labelKey: 'nav.about' },
-    { to: '/notices', labelKey: 'nav.notices' },
-    { to: '/admissions', labelKey: 'nav.admissions' },
-    { to: '/gallery', labelKey: 'nav.gallery' },
-    { to: '/contact', labelKey: 'nav.contact' }
+    { to: homePath, labelKey: 'nav.home' },
+    { to: isHindiPath ? '/about_hindi' : '/about', labelKey: 'nav.about' },
+    { to: isHindiPath ? '/notices_hindi' : '/notices', labelKey: 'nav.notices' },
+    { to: isHindiPath ? '/admissions_hindi' : '/admissions', labelKey: 'nav.admissions' },
+    { to: isHindiPath ? '/gallery_hindi' : '/gallery', labelKey: 'nav.gallery' },
+    { to: isHindiPath ? '/contact_hindi' : '/contact', labelKey: 'nav.contact' }
   ];
 
   return (

@@ -11,24 +11,25 @@ export const Header: React.FC = () => {
   const location = useLocation();
 
   const isHindi = i18n.language === 'hi';
+  const isHindiPath = isHindi || location.pathname.includes('_hindi');
+  const homePath = isHindiPath ? '/home_hindi' : '/home';
 
   const navItems = [
-    { to: '/', labelKey: 'nav.home' },
-    { to: '/about', labelKey: 'nav.about' },
-    { to: '/#teachers', labelKey: 'nav.teachers', isHash: true },
-    { to: '/notices', labelKey: 'nav.notices' },
-    { to: '/admissions', labelKey: 'nav.admissions' },
-    { to: '/gallery', labelKey: 'nav.gallery' },
-    { to: '/contact', labelKey: 'nav.contact' },
+    { to: homePath, labelKey: 'nav.home' },
+    { to: isHindiPath ? '/about_hindi' : '/about', labelKey: 'nav.about' },
+    { to: `${homePath}#teachers`, labelKey: 'nav.teachers', isHash: true },
+    { to: isHindiPath ? '/notices_hindi' : '/notices', labelKey: 'nav.notices' },
+    { to: isHindiPath ? '/admissions_hindi' : '/admissions', labelKey: 'nav.admissions' },
+    { to: isHindiPath ? '/gallery_hindi' : '/gallery', labelKey: 'nav.gallery' },
+    { to: isHindiPath ? '/contact_hindi' : '/contact', labelKey: 'nav.contact' },
     { to: '/portal', labelKey: 'nav.portals' },
   ];
 
   const handleNavItemClick = (item: { to: string; isHash?: boolean }) => {
     setIsOpen(false);
     if (item.isHash) {
-      if (location.pathname !== '/') {
-        navigate('/');
-        // Wait for navigation before scrolling
+      if (!location.pathname.startsWith('/home')) {
+        navigate(homePath);
         setTimeout(() => {
           const element = document.getElementById('teachers');
           if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -44,7 +45,7 @@ export const Header: React.FC = () => {
     { labelKey: 'utility.events', href: '#' },
     { labelKey: 'utility.blogs', href: '#' },
     { labelKey: 'utility.testimonials', href: '#' },
-    { labelKey: 'utility.announcements', href: '/notices' },
+    { labelKey: 'utility.announcements', href: isHindiPath ? '/notices_hindi' : '/notices' },
     { labelKey: 'utility.library', href: '#' },
     { labelKey: 'utility.schoolId', href: '/portal' },
   ];
@@ -79,6 +80,10 @@ export const Header: React.FC = () => {
             <span className="hidden sm:inline">info@vidyaviharvaranasi.org</span>
           </a>
           <span className="opacity-20">|</span>
+          <Link to="/" className="flex items-center gap-1 bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded text-[11px] font-bold text-white transition-colors">
+            <span>🌐 Medium Gateway</span>
+          </Link>
+          <span className="opacity-20">|</span>
           <LanguageToggle />
         </div>
       </div>
@@ -88,7 +93,7 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
           {/* Logo & School Name */}
-          <Link to="/" className="flex items-center gap-3 select-none shrink-0">
+          <Link to={homePath} className="flex items-center gap-3 select-none shrink-0">
             <div className="bg-primary text-accent p-2 rounded-lg shadow-sm border border-accent/20">
               <School size={26} className="stroke-[2.5]" />
             </div>
@@ -139,7 +144,7 @@ export const Header: React.FC = () => {
             
             {/* Apply Now Forest Green Button */}
             <Link
-              to="/admissions"
+              to={isHindiPath ? '/admissions_hindi' : '/admissions'}
               className={`ml-2 px-5 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-primary text-cream hover:bg-primary-dark transition-all duration-300 shadow-sm cursor-pointer ${
                 isHindi ? 'font-devanagari text-[14px]' : 'font-sans'
               }`}
